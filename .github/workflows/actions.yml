@@ -31,10 +31,12 @@ jobs:
 
       - name: Build project
         run: pnpm build
+      
       - name: Upload static content artifact
         uses: actions/upload-artifact@v6
         with:
           name: frontend-static-content
+          path: dist/
   compile-backend:
     needs: build-frontend
     runs-on: ubuntu-latest
