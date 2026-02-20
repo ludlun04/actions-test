@@ -16,4 +16,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run ESLint
-        run: pnpm eslint . --ext .js,.ts,.vue
+        run: pnpm eslint
+      - name: Build project
+        run: pnpm build
