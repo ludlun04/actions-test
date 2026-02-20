@@ -9,7 +9,7 @@ on:
       - main
       - dev
 jobs:
-  build:
+  build-frontend:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -17,14 +17,39 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 10
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Run ESLint
         run: pnpm eslint
+
       - name: Build project
         run: pnpm build
+  compile-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v5
+
+        with:
+          java-version: '25'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v6
+
+        with:
+          name: release-notes-artifact
+          path: target/*.jar'
   
