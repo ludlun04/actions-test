@@ -5,9 +5,7 @@ const a =1
   <h1>You did it! PR</h1>
   <p>
     Visit <a
-      href="https://vuejs.org/"
-      target="_blank"
-      rel="noopener"
+      href="https://vuejs.org/"target="_blank"rel="noopener"
     >vuejs.org</a> to read the
     documentation
   </p>
