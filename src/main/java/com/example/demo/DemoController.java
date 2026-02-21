@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
   @GetMapping("/hello")
   public String getMethodName() {
-      return "Hello";
+      return "Hello, World!";
   }
 }
