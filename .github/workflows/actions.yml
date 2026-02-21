@@ -77,7 +77,7 @@ jobs:
           node-version: '20'
 
       - name: Install Bruno CLI
-        run: npm install -g @usebruno/
+        run: npm install -g @usebruno/cli
         
       - name: Download spring-boot artifact
         uses: actions/download-artifact@v7
@@ -88,8 +88,6 @@ jobs:
       - name: Run spring-boot application
         run: java -jar target/*.jar --spring.profiles.active=ci
 
-      - name: Navigate to API tests directory
-        run: cd src/test/java/com/example/demo/ApiTests
-
       - name: Run API Tests
         run: bru run
+        working-directory: src/test/java/com/example/demo/ApiTests
