@@ -57,11 +57,39 @@ jobs:
           distribution: temurin
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn clean package
 
-      - name: Upload artifact for deployment job
+      - name: Upload spring-boot artifact
         uses: actions/upload-artifact@v6
         with:
-          name: release-notes-artifact
+          name: spring-boot-artifact
           path: target/*.jar
-  
+  test-api:
+    needs: compile-backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Bruno CLI
+        run: npm install -g @usebruno/
+        
+      - name: Download spring-boot artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: spring-boot-artifact
+          path: target/*.jar
+
+      - name: Run spring-boot application
+        run: java -jar target/*.jar --spring.profiles.active=ci
+
+      - name: Navigate to API tests directory
+        run: cd src/test/java/com/example/demo/ApiTests
+
+      - name: Run API Tests
+        run: bru run
