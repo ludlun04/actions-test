@@ -70,7 +70,7 @@ jobs:
       - name: Run spring-boot application
         run: java -jar target/*.jar --spring.profiles.active=ci &
 
-      - name: Run API Tests
+      - name: Run Bruno API Tests
         run: bru run
         working-directory: src/test/java/com/example/demo/Bruno
 
