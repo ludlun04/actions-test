@@ -1,0 +1,21 @@
+meta {
+  name: get-cats
+  type: http
+  seq: 1
+}
+
+get {
+  url: http:localhost:8080/api
+  body: none
+  auth: inherit
+}
+
+assert {
+  res.body: eq 2
+  res.status: eq 200
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

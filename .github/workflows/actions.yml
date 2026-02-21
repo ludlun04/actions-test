@@ -72,7 +72,7 @@ jobs:
 
       - name: Run API Tests
         run: bru run
-        working-directory: src/test/java/com/example/demo/ApiTests/Hello
+        working-directory: src/test/java/com/example/demo/Bruno
 
       - name: Upload spring-boot artifact
         uses: actions/upload-artifact@v6
