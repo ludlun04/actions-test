@@ -2,7 +2,7 @@
 const a =1
 </script>
 <template>
-  <h1>You did it!</h1>
+  <h1>This is a change in the diff</h1>
   <p>
     Visit <a
       href="https://vuejs.org/"
