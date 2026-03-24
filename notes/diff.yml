@@ -1,0 +1,8 @@
+reference: lalala
+scope: patch
+product: OMS
+feature: picking
+customer: Liddle
+change: Made some changes
+technical-change: This is a very technical big impressive change wow
+upgrade-requirements: Turn it off and back on again
