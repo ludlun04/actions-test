@@ -13,4 +13,11 @@ const a =1
   </p>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+</style>

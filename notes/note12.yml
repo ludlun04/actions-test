@@ -1,0 +1,7 @@
+reference: WMS-3012
+scope: patch
+product: OMS
+feature: frontend
+change: Updated the main app header styling for better visual clarity.
+technical-change: Adjusted `frontend/src/App.vue` scoped CSS to apply a new font stack and updated header color/weight/letter spacing.
+upgrade-requirements: No upgrade steps required.
