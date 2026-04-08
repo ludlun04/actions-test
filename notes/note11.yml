@@ -1,0 +1,7 @@
+reference: WMS-3011
+scope: patch
+product: OMS
+feature: frontend
+change: Added a new About view with fake testing information for UI and deployment validation.
+technical-change: Created `frontend/src/views/AboutView.vue` with static sample build metadata and contact list content.
+upgrade-requirements: No upgrade steps required.
