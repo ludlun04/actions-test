@@ -1,0 +1,7 @@
+reference: WMS-3013
+scope: patch
+product: WMS
+feature: picking
+change: Added a new Norway view with informational content for testing and demo purposes.
+technical-change: Created `frontend/src/views/NorwayView.vue` with static country facts and highlights rendered in sections.
+upgrade-requirements: No upgrade steps required.
