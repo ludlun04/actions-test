@@ -1,0 +1,8 @@
+reference: SR-32132
+scope: patch
+product: WMS
+feature: picking
+customer: Liddle
+change: added some random stuff
+technical-change: please dont tell anyone but you have to delete the database and re-apply everything
+upgrade-requirements: see technical-change
