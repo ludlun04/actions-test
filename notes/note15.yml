@@ -1,0 +1,7 @@
+reference: WMS-3014
+scope: patch
+product: OMS
+feature: picking
+change: Added Ivory Coast information view for geography reference and testing.
+technical-change: Created `frontend/src/views/IvoryCoastView.vue` with country details, highlights, and styled information display.
+upgrade-requirements: No upgrade steps required.
